@@ -18,16 +18,13 @@ import argparse
 
 def some_function(upper_limit, output):
     # Do something
-	
-	fibonacci_one = 0
-	fibonacci_two = 1
-	fibonacci = list()
 
-	while fibonacci_one <= upper_limit:
-		fibonacci_one = fibonacci_one + fibonacci_two
-		fibonacci.append(fibonacci_one)
-		fibonacci_two = fibonacci_two + fibonacci_one
-		fibonacci.append(fibonacci_two)
+	fibonacci = [0, 1]
+	fibonacci_next = 1
+
+	while fibonacci_next < upper_limit:
+		fibonacci.append(fibonacci_next)
+		fibonacci_next = fibonacci[-1] + fibonacci[-2]
 
 	return fibonacci
 
