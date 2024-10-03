@@ -16,7 +16,7 @@ Task: Generate the Fibonacci numbers less than 100 and write them to `fibonacci_
 
 import argparse
 
-def some_function(upper_limit, output):
+def fibonnaci_function(upper_limit, output):
     # Do something
 
 	fibonacci = [0, 1]
@@ -35,7 +35,7 @@ if __name__ == "__main__":
 	args = parser.parse_args()
 
 	try:
-		fibonacci_numbers = some_function(args.limit, args.filename)
+		fibonacci_numbers = fibonnaci_function(args.limit, args.filename)
 		with open(args.filename, 'w') as file:
 			file.write(str(fibonacci_numbers))
 		print(f"Fibonacci numbers are found in {args.filename}")
