@@ -17,7 +17,7 @@ import sys
 import fibonnaci
 
 def getprimenumber(number):
-	fibonnaci_list = fibonnaci.fibonnaci_function(number)
+	fibonnaci_list = fibonnaci.fibonnaci_function(number, 0)
 
 	prime_no = 0
 
@@ -25,7 +25,7 @@ def getprimenumber(number):
 		count = 0
 
 		for i in range(1, nums+1):
-			if nums % i == 1:
+			if nums % i == 0:
 				count += 1
 			
 		if count == 2:
@@ -42,10 +42,4 @@ if __name__ == "__main__":
 
 	largestprimefromfib = getprimenumber(upper_limits)
 
-	print(f"THe largest prime Fibonnaci number less than {upper_limits} is: {largestprimefromfib}.")
-	
-
-
-
-
-
+	print(f"The largest prime Fibonnaci number less than {upper_limits} is: {largestprimefromfib}.")
